@@ -134,6 +134,8 @@
             // 
             // dgvPacientes
             // 
+            this.dgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPacientes.Location = new System.Drawing.Point(143, 345);
             this.dgvPacientes.Name = "dgvPacientes";
@@ -310,6 +312,7 @@
             this.Controls.Add(this.panelContenedor);
             this.Name = "frmCRUDPasiente";
             this.Text = "frmCRUDPasiente";
+            this.Load += new System.EventHandler(this.frmCRUDPasiente_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
