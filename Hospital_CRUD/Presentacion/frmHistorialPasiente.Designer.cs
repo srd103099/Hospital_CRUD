@@ -259,7 +259,6 @@
             this.Controls.Add(this.panelContenedor);
             this.Name = "frmHistorialPasiente";
             this.Text = "frmHistorialPasiente";
-            this.Load += new System.EventHandler(this.frmHistorialPasiente_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
