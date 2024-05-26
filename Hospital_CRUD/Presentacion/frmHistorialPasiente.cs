@@ -233,5 +233,25 @@ namespace Hospital_CRUD
                 return 0; 
             }
         }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCedula_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
