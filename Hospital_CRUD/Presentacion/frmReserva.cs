@@ -18,7 +18,11 @@ namespace Hospital_CRUD
         public frmReserva()
         {
             InitializeComponent();
-            
+            CargarEspecialidades();
+            CargarDoctores();
+
+
+
             #region[Lista Hora]
             List<string> horas = new List<string>();
             cboHora.Items.Add("05:00");
@@ -43,6 +47,47 @@ namespace Hospital_CRUD
 
         }
         private static string cadenaConexion = ConfigurationManager.ConnectionStrings["PROYECTO_FINAL3"].ConnectionString;
+
+
+        //Traer elementos a la tabla de datos
+        /*private void CargarEspecialidades()
+        {
+            cboEspecialista.Items.Clear();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                SqlCommand comando = new SqlCommand("SELECT Especialidad FROM Doctor", conexion);
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    string especialidad = reader.GetString(0);
+                    cboEspecialista.Items.Add(especialidad);
+                }
+                reader.Close();
+            }
+        }*/
+
+        private void CargarEspecialidades()
+        {
+            cboEspecialista.Items.Clear();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                SqlCommand comando = new SqlCommand("SELECT Servicio FROM Servicios", conexion);
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    string servicio = reader.GetString(0);
+                    cboEspecialista.Items.Add(servicio);
+                }
+                reader.Close();
+            }
+        }
+
+
+
+
+
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
@@ -81,92 +126,50 @@ namespace Hospital_CRUD
 
         }
 
-       /* public static List<clsCita> frmReserva_Load(object sender, EventArgs e)
-        {
-            // Coneccion de SQL Server para poder obtener la informacion de la base de datos
-
-            List<clsCita> Cita = new List<clsCita>();
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
-            {
-                SqlCommand comando = new SqlCommand("SELECT * FROM CITA", conexion);
-                conexion.Open();
-                SqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
-                {
-                    clsCita Citas = new clsCita
-                    {
-                        Id_Cita = (int)reader["Id_Cita"],
-                        Id_Consultorio = (int)reader["Id_Consultorio"],
-                        Id_Servicios = (int)reader["Id_Servicios"],
-                        Id_Cedula = (int)reader["Id_Cedula"],
-                        Fecha = (DateTime)reader["Fecha"],
-                        Hora = (DateTime)reader["Hora"],
-                    };
-                    Cita.Add(Citas);
-                }
-            }
-            return Cita;
-        }*/
-
+    
         private void cboEspecialista_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Coneccion de SQL Server para poder obtener la informacion de la base de datos
-
-            List<clsCita> Cita = new List<clsCita>();
+            int idDoctorSeleccionado = Convert.ToInt32(cboEspecialista.SelectedValue);
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                SqlCommand comando = new SqlCommand("SELECT * FROM CITA", conexion);
-                conexion.Open();
-                SqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
+                SqlCommand comando = new SqlCommand("SELECT Nombre FROM CONSULTORIO WHERE Id_Consultorio = (SELECT Id_Consultorio FROM DOCTOR WHERE Id_Doctor = @IdDoctor)", conexion);
+                comando.Parameters.AddWithValue("@IdDoctor", idDoctorSeleccionado);
+                try
                 {
-                    clsCita Citas = new clsCita
+                    conexion.Open();
+                    var nombreConsultorio = comando.ExecuteScalar();
+                    if (nombreConsultorio != null)
                     {
-                        Id_Cita = (int)reader["Id_Cita"],
-                        Id_Consultorio = (int)reader["Id_Consultorio"],
-                        Id_Servicios = (int)reader["Id_Servicios"],
-                        Id_Cedula = (int)reader["Id_Cedula"],
-                        Fecha = (DateTime)reader["Fecha"],
-                        Hora = (DateTime)reader["Hora"],
-                    };
-                    Cita.Add(Citas);
+                        txtConsultorio.Text = nombreConsultorio.ToString();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el consultorio: " + ex.Message);
+                }
+
             }
         }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        private void CargarDoctores()
         {
-
-            /*List<clsServicio> Servicio = new List<clsServicio>();
-            List<clsConsultorio> Consultorio = new List<clsConsultorio>();
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                SqlCommand comando = new SqlCommand("SELECT * FROM CONSULTORIO INNER JOIN SERVICIOS ON CONSULTORIO.Id_Consultorio = SERVICIOS.Id_Servicios", conexion);
-                conexion.Open();
-                SqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
+                SqlCommand comando = new SqlCommand("SELECT Id_Doctor, Especialidad FROM DOCTOR", conexion);
+                DataTable dtDoctores = new DataTable();
+                try
                 {
-                    clsServicio Servicios = new clsServicio
-                    { 
-                        Id_Consultorio = (int)reader["Id_Consultorio"],
-                        Id_Servicios = (int)reader["Id_Servicios"],
-
-
-                    };
-                    Servicio.Add(Servicios);
-                    clsConsultorio Consultorios = new clsConsultorio
-                    {
-                        Id_Hospital = (int)reader["Id_Consultorio"],
-                        Nombre = (string)reader["Nombre"],
-                        Disponibilidad = (string)reader["Disponibilidad"],
-
-                    };
-                    Servicio.Add(Servicios);
-
-
-
+                    conexion.Open();
+                    SqlDataReader reader = comando.ExecuteReader();
+                    dtDoctores.Load(reader);
+                    cboEspecialista.DisplayMember = "Especialidad";
+                    cboEspecialista.ValueMember = "Id_Doctor";
+                    cboEspecialista.DataSource = dtDoctores;
                 }
-            }*/
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar los doctores: " + ex.Message);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -175,6 +178,8 @@ namespace Hospital_CRUD
             this.Hide();
             inicioSesionPasiente.Show();
         }
+        
+
     }
     
 }

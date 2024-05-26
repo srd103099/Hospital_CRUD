@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\clsServiciosDoctor.cs" />
+    <Compile Include="Datos\clsServiciosDoctorDAO.cs" />
     <Compile Include="Entidad\clsConsultorio.cs" />
     <Compile Include="Entidad\clsConsultorioDAO.cs" />
     <Compile Include="Entidad\clsServicio.cs" />

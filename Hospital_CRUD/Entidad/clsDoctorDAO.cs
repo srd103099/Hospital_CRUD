@@ -30,10 +30,12 @@ namespace Hospital_CRUD
                     {
                         Id_Doctor = (int)reader["Id_Doctor"],
                         Id_UsuarioDoctor = (int)reader["Id_UsuarioDoctor"],
+                        Id_Consultorio = (int)reader["Id_Consultorio"],
                         Nombre = (string)reader["Nombre"],
                         Apellido = (string)reader["Apellido"],
                         Especialidad = (string)reader["Especialidad"],
-                 
+
+
                     };
                     Doctor.Add(Doctores);
                 }

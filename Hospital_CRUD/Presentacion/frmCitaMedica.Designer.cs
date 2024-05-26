@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtServicio = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtConsultorio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.lblCedula = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -51,7 +49,8 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialPasienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cboHora = new System.Windows.Forms.ComboBox();
+            this.lblHora = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,15 +60,14 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelContenedor.Controls.Add(this.cboHora);
+            this.panelContenedor.Controls.Add(this.lblHora);
+            this.panelContenedor.Controls.Add(this.monthCalendar1);
             this.panelContenedor.Controls.Add(this.button1);
-            this.panelContenedor.Controls.Add(this.textBox4);
+            this.panelContenedor.Controls.Add(this.txtServicio);
             this.panelContenedor.Controls.Add(this.label4);
-            this.panelContenedor.Controls.Add(this.textBox3);
-            this.panelContenedor.Controls.Add(this.label3);
             this.panelContenedor.Controls.Add(this.txtConsultorio);
             this.panelContenedor.Controls.Add(this.label2);
-            this.panelContenedor.Controls.Add(this.textBox1);
-            this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.txtCedula);
             this.panelContenedor.Controls.Add(this.lblCedula);
             this.panelContenedor.Controls.Add(this.button5);
@@ -87,16 +85,36 @@
             this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 8;
             // 
-            // textBox4
+            // monthCalendar1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(966, 62);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 23);
-            this.textBox4.TabIndex = 33;
+            this.monthCalendar1.Location = new System.Drawing.Point(176, 109);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1166, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 36);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtServicio
+            // 
+            this.txtServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServicio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServicio.ForeColor = System.Drawing.Color.White;
+            this.txtServicio.Location = new System.Drawing.Point(966, 62);
+            this.txtServicio.Name = "txtServicio";
+            this.txtServicio.Size = new System.Drawing.Size(207, 23);
+            this.txtServicio.TabIndex = 33;
             // 
             // label4
             // 
@@ -105,31 +123,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(878, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.Size = new System.Drawing.Size(85, 23);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Cedula:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(605, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 23);
-            this.textBox3.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(517, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Cedula:";
+            this.label4.Text = "Servicio:";
             // 
             // txtConsultorio
             // 
@@ -152,28 +148,6 @@
             this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 28;
             this.label2.Text = "Consultorio:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(259, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 23);
-            this.textBox1.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(171, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Cedula:";
             // 
             // txtCedula
             // 
@@ -202,7 +176,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(900, 350);
+            this.button5.Location = new System.Drawing.Point(895, 498);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(139, 34);
             this.button5.TabIndex = 23;
@@ -214,7 +188,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(788, 350);
+            this.button4.Location = new System.Drawing.Point(783, 498);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(106, 34);
             this.button4.TabIndex = 22;
@@ -226,7 +200,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(676, 350);
+            this.btnEliminar.Location = new System.Drawing.Point(671, 498);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 34);
             this.btnEliminar.TabIndex = 21;
@@ -238,7 +212,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(564, 350);
+            this.btnModificar.Location = new System.Drawing.Point(559, 498);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(106, 34);
             this.btnModificar.TabIndex = 20;
@@ -250,7 +224,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(452, 350);
+            this.btnBuscar.Location = new System.Drawing.Point(447, 498);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(106, 34);
             this.btnBuscar.TabIndex = 19;
@@ -262,7 +236,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(340, 350);
+            this.btnAgregar.Location = new System.Drawing.Point(335, 498);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(106, 34);
             this.btnAgregar.TabIndex = 18;
@@ -273,7 +247,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(168, 180);
+            this.dataGridView1.Location = new System.Drawing.Point(163, 328);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -327,19 +301,27 @@
             this.historialPasienteToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.historialPasienteToolStripMenuItem.Text = "&HistorialPasiente";
             // 
-            // button1
+            // cboHora
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1166, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cboHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboHora.ForeColor = System.Drawing.Color.White;
+            this.cboHora.FormattingEnabled = true;
+            this.cboHora.Location = new System.Drawing.Point(584, 109);
+            this.cboHora.Name = "cboHora";
+            this.cboHora.Size = new System.Drawing.Size(228, 24);
+            this.cboHora.TabIndex = 37;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(518, 110);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(60, 23);
+            this.lblHora.TabIndex = 36;
+            this.lblHora.Text = "Hora:";
             // 
             // frmCitaMedica
             // 
@@ -362,14 +344,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtServicio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtConsultorio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Button button5;
@@ -385,5 +363,8 @@
         private System.Windows.Forms.ToolStripMenuItem citaMedicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialPasienteToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ComboBox cboHora;
+        private System.Windows.Forms.Label lblHora;
     }
 }

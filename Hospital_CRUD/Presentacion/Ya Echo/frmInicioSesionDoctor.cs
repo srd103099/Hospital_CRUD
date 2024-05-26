@@ -77,6 +77,13 @@ namespace Hospital_CRUD
             this.Hide();
             form.Show();
         }
+
+        private void pasienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInicioSesionPasiente inicioSesionPasiente = new frmInicioSesionPasiente();
+            this.Hide();
+            inicioSesionPasiente.Show();
+        }
     }
 }
 

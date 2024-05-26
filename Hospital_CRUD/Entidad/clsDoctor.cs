@@ -14,6 +14,7 @@ namespace Hospital_CRUD
         public string Apellido { get; set; }
 
         public string Especialidad { get; set; }
+        public int Id_Consultorio { get; set; }
 
       
     }

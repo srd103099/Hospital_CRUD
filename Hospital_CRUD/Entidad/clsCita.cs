@@ -13,6 +13,6 @@ namespace Hospital_CRUD
         public int Id_Servicios { get; set; }
         public int Id_Cedula { get; set; }
         public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; }
+        public string Hora { get; set; }
     }
 }

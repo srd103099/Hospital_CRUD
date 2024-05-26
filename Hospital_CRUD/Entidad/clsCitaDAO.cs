@@ -32,8 +32,8 @@ namespace Hospital_CRUD
                         Id_Consultorio = (int)reader["Id_Consultorio"],
                         Id_Servicios = (int)reader["Id_Servicios"],
                         Id_Cedula = (int)reader["Id_Cedula"],
-                        Fecha = (DateTime)reader["Fecha"],
-                        Hora = (DateTime)reader["Hora"],
+                        //Fecha = (DateTime)reader["Fecha"],
+                        Hora = (string)reader["Hora"],
                     };
                     Cita.Add(CitasMedicas);
                 }
@@ -68,7 +68,7 @@ namespace Hospital_CRUD
                 comando.Parameters.AddWithValue("@Id_Consultorio", CitasMedicas.Id_Consultorio);
                 comando.Parameters.AddWithValue("@Id_Servicios", CitasMedicas.Id_Servicios);
                 comando.Parameters.AddWithValue("@Id_Cedula", CitasMedicas.Id_Cedula);
-                comando.Parameters.AddWithValue("@Fecha", CitasMedicas.Fecha);
+                //comando.Parameters.AddWithValue("@Fecha", CitasMedicas.Fecha);
                 comando.Parameters.AddWithValue("@Hora", CitasMedicas.Hora);
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -106,7 +106,7 @@ namespace Hospital_CRUD
                         Id_Servicios = (int)reader["Id_Servicios"],
                         Id_Cedula = (int)reader["Id_Cedula"],
                         Fecha = (DateTime)reader["Fecha"],
-                        Hora = (DateTime)reader["Hora"],
+                        Hora = (string)reader["Hora"],
                     };
                 }
             }
