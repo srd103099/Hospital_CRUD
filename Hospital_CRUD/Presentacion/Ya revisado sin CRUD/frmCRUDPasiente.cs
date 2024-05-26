@@ -59,34 +59,34 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
             }
         }
 
-        private void ActualizarPaciente(int idCedula, string nombre, string apellido, int telefono, string correo)
-        {
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            private void ActualizarPaciente(int idCedula, string nombre, string apellido, int telefono, string correo)
             {
-                SqlCommand comando = new SqlCommand("SP_ActualizarPasiente", conexion);
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@Id_Cedula", idCedula);
-                comando.Parameters.AddWithValue("@Nombre", nombre);
-                comando.Parameters.AddWithValue("@Apellido", apellido);
-                comando.Parameters.AddWithValue("@Telefono", telefono);
-                comando.Parameters.AddWithValue("@Correo", correo);
-
-                try
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
-                    conexion.Open();
-                    int resultado = comando.ExecuteNonQuery();
-                    if (resultado > 0)
+                    SqlCommand comando = new SqlCommand("SP_ActualizarPasiente", conexion);
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@Id_Cedula", idCedula);
+                    comando.Parameters.AddWithValue("@Nombre", nombre);
+                    comando.Parameters.AddWithValue("@Apellido", apellido);
+                    comando.Parameters.AddWithValue("@Telefono", telefono);
+                    comando.Parameters.AddWithValue("@Correo", correo);
+
+                    try
                     {
-                        MessageBox.Show("Paciente actualizado correctamente.");
-                        CargarPacientes(); // Recargar los datos en el DataGridView
+                        conexion.Open();
+                        int resultado = comando.ExecuteNonQuery();
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("Paciente actualizado correctamente.");
+                            CargarPacientes(); // Recargar los datos en el DataGridView
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al actualizar el paciente: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al actualizar el paciente: " + ex.Message);
-                }
             }
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
