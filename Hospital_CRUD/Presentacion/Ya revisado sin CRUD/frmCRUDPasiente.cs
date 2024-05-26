@@ -45,11 +45,11 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
         {
             if (dgvPacientes.CurrentRow != null)
             {
-                int idCedula = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["Id_Cedula"].Value);
-                string nombre = dgvPacientes.CurrentRow.Cells["Nombre"].Value.ToString();
-                string apellido = dgvPacientes.CurrentRow.Cells["Apellido"].Value.ToString();
-                int telefono = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["Telefono"].Value);
-                string correo = dgvPacientes.CurrentRow.Cells["Correo"].Value.ToString();
+                int idCedula = Convert.ToInt32(txtCedula.Text);
+                string nombre = txtNombre.Text;
+                string apellido = txtApellido.Text;
+                int telefono = Convert.ToInt32(txtTelefono.Text);
+                string correo = txtCorreo.Text;
 
                 ActualizarPaciente(idCedula, nombre, apellido, telefono, correo);
             }
@@ -87,6 +87,7 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
                 }
             }
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvPacientes.CurrentRow != null)
