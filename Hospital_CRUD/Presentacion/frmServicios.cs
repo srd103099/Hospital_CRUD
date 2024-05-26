@@ -24,6 +24,9 @@ namespace Hospital_CRUD
             inicioSesionPasiente.Show();
         }
 
-  
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

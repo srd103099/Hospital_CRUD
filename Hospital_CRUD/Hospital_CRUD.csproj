@@ -134,10 +134,10 @@
     <Compile Include="Presentacion\Ya Echo\frmRegistrarse.Designer.cs">
       <DependentUpon>frmRegistrarse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmReserva.cs">
+    <Compile Include="Presentacion\Ya Echo\frmReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmReserva.Designer.cs">
+    <Compile Include="Presentacion\Ya Echo\frmReserva.Designer.cs">
       <DependentUpon>frmReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmServicios.cs">
@@ -181,7 +181,7 @@
     <EmbeddedResource Include="Presentacion\Ya Echo\frmRegistrarse.resx">
       <DependentUpon>frmRegistrarse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmReserva.resx">
+    <EmbeddedResource Include="Presentacion\Ya Echo\frmReserva.resx">
       <DependentUpon>frmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmServicios.resx">
