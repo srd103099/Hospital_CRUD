@@ -140,16 +140,6 @@ namespace Hospital_CRUD
             }
         }
 
-        /*private void frmHistorialPasiente_Load(object sender, EventArgs e)
-        {
-            Historial();
-        }
-
-        private void Historial()
-        {
-            dgvHistorial.DataSource = clsHistorialCLinicoDAO.ObtenerHistorial();
-        }*/
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
@@ -160,15 +150,6 @@ namespace Hospital_CRUD
             ModificarHistorial(idHistorial, idCedula, descripcion);
             Historial();
 
-            /*clsHistorialClinico clienteModificado = new clsHistorialClinico
-            {
-                Id_Cedula = Convert.ToInt32(txtCedula.Text),
-                Descripcion = txtDescripcion.Text,
-            };
-            txtCedula.Enabled = true;
-            txtDescripcion.Enabled = true;
-            clsHistorialCLinicoDAO.ModificarHistoriale(clienteModificado);
-            Historial();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -177,10 +158,7 @@ namespace Hospital_CRUD
 
             EliminarHistorial(idHistorial);
             Historial();
-            /*
-            int Id_Cedula = int.Parse(txtCedula.Text);
-            clsHistorialCLinicoDAO.EliminarHistorial(Id_Cedula);
-            Historial();*/
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -196,16 +174,7 @@ namespace Hospital_CRUD
             {
                 MessageBox.Show("No se encontró el historial clínico.");
             }
-            /*int Id_Cedula = int.Parse(txtCedula.Text);
-            clsHistorialClinico clienteModificado = clsHistorialCLinicoDAO.BuscarHistorial(Id_Cedula);
-            if (clienteModificado != null)
-            {
-                txtCedula.Text = clienteModificado.Id_Cedula.ToString();
-                txtDescripcion.Text = clienteModificado.Descripcion.ToString();
-            }
-            txtCedula.Enabled = false;
-            txtDescripcion.Enabled = false;
-            btnAgregar.Enabled = true;*/
+
         }
 
         private int ObtenerIdHistorialSeleccionado()
