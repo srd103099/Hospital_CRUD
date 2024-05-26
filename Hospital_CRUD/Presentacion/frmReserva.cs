@@ -101,7 +101,14 @@ namespace Hospital_CRUD
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            int idConsultorio = Convert.ToInt32(txtConsultorio.Text);
+
+            // Asegúrate de que el valor de txtConsultorio.Text sea un número válido antes de convertirlo.
+            if (!int.TryParse(txtConsultorio.Text, out int idConsultorio))
+            {
+                MessageBox.Show("Por favor, ingrese un ID de consultorio válido.");
+                return;
+            }
+
             if (!ConsultorioExiste(idConsultorio))
             {
                 MessageBox.Show("El consultorio seleccionado no existe.");
@@ -142,25 +149,26 @@ namespace Hospital_CRUD
     
         private void cboEspecialista_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int idDoctorSeleccionado = Convert.ToInt32(cboEspecialista.SelectedValue);
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            if (cboEspecialista.SelectedValue is int idDoctorSeleccionado)
             {
-                SqlCommand comando = new SqlCommand("SELECT Nombre FROM CONSULTORIO WHERE Id_Consultorio = (SELECT Id_Consultorio FROM DOCTOR WHERE Id_Doctor = @IdDoctor)", conexion);
-                comando.Parameters.AddWithValue("@IdDoctor", idDoctorSeleccionado);
-                try
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
-                    conexion.Open();
-                    var nombreConsultorio = comando.ExecuteScalar();
-                    if (nombreConsultorio != null)
+                    SqlCommand comando = new SqlCommand("SELECT Id_Consultorio FROM DOCTOR WHERE Id_Doctor = @IdDoctor", conexion);
+                    comando.Parameters.AddWithValue("@IdDoctor", idDoctorSeleccionado);
+                    try
                     {
-                        txtConsultorio.Text = nombreConsultorio.ToString();
+                        conexion.Open();
+                        var idConsultorio = comando.ExecuteScalar();
+                        if (idConsultorio != null)
+                        {
+                            txtConsultorio.Text = idConsultorio.ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al obtener el consultorio: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al obtener el consultorio: " + ex.Message);
-                }
-
             }
         }
         private void CargarDoctores()
