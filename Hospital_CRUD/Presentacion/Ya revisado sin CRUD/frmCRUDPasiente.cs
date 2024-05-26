@@ -128,5 +128,25 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
                 }
             }
         }
+
+        private void dgvPacientes_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvPacientes.CurrentRow != null)
+            {
+                txtCedula.Text = dgvPacientes.CurrentRow.Cells["Id_Cedula"].Value.ToString();
+                txtNombre.Text = dgvPacientes.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtApellido.Text = dgvPacientes.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtTelefono.Text = dgvPacientes.CurrentRow.Cells["Telefono"].Value.ToString();
+                txtCorreo.Text = dgvPacientes.CurrentRow.Cells["Correo"].Value.ToString();
+            }
+            else
+            {
+                txtCedula.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtTelefono.Clear();
+                txtCorreo.Clear();
+            }
+        }
     }
 }

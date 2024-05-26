@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,13 @@ namespace Hospital_CRUD
             frmCitaMedica CitaMedica = new frmCitaMedica();
             this.Hide();
             CitaMedica.Show();
+        }
+
+        private void pasienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCRUDPasiente pasiente = new frmCRUDPasiente();
+            this.Hide();
+            pasiente.Show();
         }
     }
 }

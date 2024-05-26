@@ -34,6 +34,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialPasienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -68,7 +69,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.historialPasienteToolStripMenuItem,
-            this.citaMedicaToolStripMenuItem});
+            this.citaMedicaToolStripMenuItem,
+            this.pasienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(156, 653);
@@ -99,6 +101,13 @@
             this.citaMedicaToolStripMenuItem.Text = "&CitaMedica";
             this.citaMedicaToolStripMenuItem.Click += new System.EventHandler(this.citaMedicaToolStripMenuItem_Click);
             // 
+            // pasienteToolStripMenuItem
+            // 
+            this.pasienteToolStripMenuItem.Name = "pasienteToolStripMenuItem";
+            this.pasienteToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.pasienteToolStripMenuItem.Text = "&Pasiente";
+            this.pasienteToolStripMenuItem.Click += new System.EventHandler(this.pasienteToolStripMenuItem_Click);
+            // 
             // frmDoctorInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -124,5 +133,6 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialPasienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem citaMedicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasienteToolStripMenuItem;
     }
 }
