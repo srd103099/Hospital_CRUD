@@ -32,7 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.panelContenedor.Controls.Add(this.button1);
             this.panelContenedor.Controls.Add(this.txtDescripcion);
             this.panelContenedor.Controls.Add(this.lblDescripcion);
-            this.panelContenedor.Controls.Add(this.button5);
             this.panelContenedor.Controls.Add(this.btnEliminar);
             this.panelContenedor.Controls.Add(this.btnModificar);
             this.panelContenedor.Controls.Add(this.btnBuscar);
@@ -110,18 +108,6 @@
             this.lblDescripcion.Size = new System.Drawing.Size(115, 23);
             this.lblDescripcion.TabIndex = 30;
             this.lblDescripcion.Text = "Descripcion:";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(865, 404);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 34);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Archivo CSV";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
@@ -221,7 +207,7 @@
             // dgvHistorial
             // 
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorial.Location = new System.Drawing.Point(136, 74);
+            this.dgvHistorial.Location = new System.Drawing.Point(136, 73);
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.RowHeadersWidth = 51;
             this.dgvHistorial.RowTemplate.Height = 24;
@@ -298,7 +284,6 @@
         private System.Windows.Forms.ToolStripMenuItem citaMedicaToolStripMenuItem;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBuscar;

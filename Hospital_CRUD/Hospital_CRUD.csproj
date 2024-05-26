@@ -86,6 +86,12 @@
     <Compile Include="Presentacion\frmCitaMedica.Designer.cs">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.Designer.cs">
+      <DependentUpon>frmCRUDPasiente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmCitaMedica.resx">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.resx">
+      <DependentUpon>frmCRUDPasiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.resx">
       <DependentUpon>frmDoctorInicio.cs</DependentUpon>
