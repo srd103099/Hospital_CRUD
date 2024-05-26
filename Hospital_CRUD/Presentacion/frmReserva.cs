@@ -47,7 +47,17 @@ namespace Hospital_CRUD
 
         }
         private static string cadenaConexion = ConfigurationManager.ConnectionStrings["PROYECTO_FINAL3"].ConnectionString;
-
+        private bool ConsultorioExiste(int idConsultorio)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                SqlCommand comando = new SqlCommand("SELECT COUNT(1) FROM CONSULTORIO WHERE Id_Consultorio = @IdConsultorio", conexion);
+                comando.Parameters.AddWithValue("@IdConsultorio", idConsultorio);
+                conexion.Open();
+                int count = Convert.ToInt32(comando.ExecuteScalar());
+                return count > 0;
+            }
+        }
 
         //Traer elementos a la tabla de datos
         /*private void CargarEspecialidades()
@@ -91,36 +101,39 @@ namespace Hospital_CRUD
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            List<clsPasiente> InfoPasiente = new List<clsPasiente>();
+            int idConsultorio = Convert.ToInt32(txtConsultorio.Text);
+            if (!ConsultorioExiste(idConsultorio))
+            {
+                MessageBox.Show("El consultorio seleccionado no existe.");
+                return;
+            }
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
+
                 try
                 {
-                    SqlCommand comando = new SqlCommand("Select *", conexion); conexion.Open();
-                    comando.CommandType = CommandType.StoredProcedure; // Especifica que el comando es un procedimiento almacenado
-                    comando.Parameters.AddWithValue("Id_Consultorio", txtConsultorio.Text);
-                    comando.Parameters.AddWithValue("Id_Servicios", cboEspecialista.Text);
-                    comando.Parameters.AddWithValue("Id_Cedula", txtCedula.Text);
-                    comando.Parameters.AddWithValue("Fecha", monthCalendar1.Text);
-                    comando.Parameters.AddWithValue("Hora", cboHora.Text);
+                    conexion.Open();
+                    SqlCommand comando = new SqlCommand("SP_CrearCita", conexion);
+                    comando.CommandType = CommandType.StoredProcedure;
 
-                    SqlDataReader lector = comando.ExecuteReader();
-
-                    if (lector.Read())
+                    comando.Parameters.AddWithValue("@Id_Consultorio", Convert.ToInt32(txtConsultorio.Text)); 
+                    comando.Parameters.AddWithValue("@Id_Servicios", Convert.ToInt32(cboEspecialista.SelectedValue)); 
+                    comando.Parameters.AddWithValue("@Id_Cedula", Convert.ToInt32(txtCedula.Text)); 
+                    comando.Parameters.AddWithValue("@Fecha", monthCalendar1.SelectionRange.Start); 
+                    comando.Parameters.AddWithValue("@Hora", TimeSpan.Parse(cboHora.SelectedItem.ToString()));
+                    int resultado = comando.ExecuteNonQuery();
+                    if (resultado > 0)
                     {
-                        MessageBox.Show("Te haz registrado tu informacion con exito.");
-                        conexion.Close();
-
-                        frmPasienteInicio PasienteInicio = new frmPasienteInicio();
-                        this.Hide();
-                        PasienteInicio.Show(); ;
+                        MessageBox.Show("La cita ha sido reservada con éxito.");
                     }
-                    
+                    else
+                    {
+                        MessageBox.Show("No se pudo reservar la cita.");
+                    }
                 }
-                catch (Exception) /* <------------ (MALO) */
+                catch (Exception ex)
                 {
-
-                    //throw;
+                    MessageBox.Show("Error al reservar la cita: " + ex.Message);
                 }
             }
 
