@@ -98,7 +98,17 @@ namespace Hospital_CRUD
                 int idCedula;
                 if (int.TryParse(txtCedula.Text, out idCedula))
                 {
-                    BuscarYMostrarHistorial(idCedula);
+                    clsHistorialClinico historial = BuscarHistorial(idCedula);
+                    if (historial != null)
+                    {
+                        historial.Descripcion = txtDescripcion.Text;
+                        ModificarHistorial(historial.Id_Historial, historial.Id_Cedula, historial.Descripcion);
+                    }
+                    else
+                    {
+                        AgregarHistorial(idCedula, txtDescripcion.Text);
+                    }
+                    Historial();
                 }
                 else
                 {
@@ -111,7 +121,7 @@ namespace Hospital_CRUD
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                string query = "SP_ObtenerHistorialClinicoPorCedula";
+                string query = "SP_ObtenerHistorialClinico";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@Id_Cedula", idCedula);
@@ -128,7 +138,7 @@ namespace Hospital_CRUD
                 else
                 {
                     MessageBox.Show("No se encontró el historial clínico para la cédula proporcionada.");
-                    dgvHistorial.DataSource = null; 
+                    dgvHistorial.DataSource = null; // Limpia el DataGridView si no hay resultados
                 }
             }
         }
