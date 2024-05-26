@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.txtConsultorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +64,6 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelContenedor.Controls.Add(this.dateTimePicker1);
             this.panelContenedor.Controls.Add(this.button1);
             this.panelContenedor.Controls.Add(this.txtConsultorio);
             this.panelContenedor.Controls.Add(this.label1);
@@ -93,13 +91,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 5;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(910, 397);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
-            this.dateTimePicker1.TabIndex = 34;
             // 
             // button1
             // 
@@ -433,6 +424,5 @@
         private System.Windows.Forms.TextBox txtConsultorio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

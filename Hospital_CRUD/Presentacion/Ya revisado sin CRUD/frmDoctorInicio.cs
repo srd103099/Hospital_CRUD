@@ -28,9 +28,9 @@ namespace Hospital_CRUD
 
         private void citaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCitaMedica CitaMedica = new frmCitaMedica();
+            /*frmCitaMedica CitaMedica = new frmCitaMedica();
             this.Hide();
-            CitaMedica.Show();
+            CitaMedica.Show();*/
         }
 
         private void pasienteToolStripMenuItem_Click(object sender, EventArgs e)

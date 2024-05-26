@@ -74,22 +74,16 @@
     <Compile Include="Presentacion\Ya revisado sin CRUD\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmBuscarCita.cs">
+    <Compile Include="Presentacion\Ya Echo\frmBuscarCita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmBuscarCita.Designer.cs">
+    <Compile Include="Presentacion\Ya Echo\frmBuscarCita.Designer.cs">
       <DependentUpon>frmBuscarCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmCitaMedica.cs">
+    <Compile Include="Presentacion\Ya Echo\frmCRUDPasiente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmCitaMedica.Designer.cs">
-      <DependentUpon>frmCitaMedica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.Designer.cs">
+    <Compile Include="Presentacion\Ya Echo\frmCRUDPasiente.Designer.cs">
       <DependentUpon>frmCRUDPasiente.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.cs">
@@ -157,13 +151,10 @@
     <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmBuscarCita.resx">
+    <EmbeddedResource Include="Presentacion\Ya Echo\frmBuscarCita.resx">
       <DependentUpon>frmBuscarCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmCitaMedica.resx">
-      <DependentUpon>frmCitaMedica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmCRUDPasiente.resx">
+    <EmbeddedResource Include="Presentacion\Ya Echo\frmCRUDPasiente.resx">
       <DependentUpon>frmCRUDPasiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.resx">
