@@ -153,7 +153,7 @@ namespace Hospital_CRUD
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
-            int idHistorial = ObtenerIdHistorialSeleccionado(); // Necesitas implementar este método.
+            int idHistorial = ObtenerIdHistorialSeleccionado();
             int idCedula = Convert.ToInt32(txtCedula.Text);
             string descripcion = txtDescripcion.Text;
 
@@ -173,7 +173,7 @@ namespace Hospital_CRUD
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int idHistorial = ObtenerIdHistorialSeleccionado(); // Necesitas implementar este método.
+            int idHistorial = ObtenerIdHistorialSeleccionado();
 
             EliminarHistorial(idHistorial);
             Historial();
@@ -210,7 +210,6 @@ namespace Hospital_CRUD
 
         private int ObtenerIdHistorialSeleccionado()
         {
-            // Asegúrate de que hay una fila seleccionada y de obtener el valor de la columna correcta que contiene el Id_Historial.
             if (dgvHistorial.SelectedRows.Count > 0)
             {
                 return Convert.ToInt32(dgvHistorial.SelectedRows[0].Cells["Id_Historial"].Value);
@@ -218,7 +217,7 @@ namespace Hospital_CRUD
             else
             {
                 MessageBox.Show("Por favor, selecciona un historial clínico de la lista.");
-                return 0; // O maneja esta situación como prefieras.
+                return 0; 
             }
         }
     }
