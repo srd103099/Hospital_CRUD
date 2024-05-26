@@ -23,5 +23,7 @@ namespace Hospital_CRUD
             this.Hide();
             inicioSesionPasiente.Show();
         }
+
+    
     }
 }

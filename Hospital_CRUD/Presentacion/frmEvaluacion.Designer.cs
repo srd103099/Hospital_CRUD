@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.lblCedula = new System.Windows.Forms.Label();
+            this.btnCalificacion = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.lblEspecialista = new System.Windows.Forms.Label();
+            this.lblCita = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblInfoPasiente = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -38,27 +45,27 @@
             this.reservarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.lblCita = new System.Windows.Forms.Label();
-            this.lblEspecialista = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelContenedor.Controls.Add(this.dataGridView1);
+            this.panelContenedor.Controls.Add(this.txtCedula);
+            this.panelContenedor.Controls.Add(this.lblCedula);
+            this.panelContenedor.Controls.Add(this.btnCalificacion);
             this.panelContenedor.Controls.Add(this.numericUpDown2);
             this.panelContenedor.Controls.Add(this.lblEspecialista);
             this.panelContenedor.Controls.Add(this.lblCita);
             this.panelContenedor.Controls.Add(this.numericUpDown1);
             this.panelContenedor.Controls.Add(this.button1);
-            this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.lblInfoPasiente);
             this.panelContenedor.Controls.Add(this.pictureBox2);
             this.panelContenedor.Controls.Add(this.menuStrip1);
@@ -68,16 +75,88 @@
             this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 7;
             // 
-            // label1
+            // txtCedula
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(152, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(545, 38);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Evaluacion Cita Medica y Especialista";
+            this.txtCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.ForeColor = System.Drawing.Color.White;
+            this.txtCedula.Location = new System.Drawing.Point(272, 81);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(207, 23);
+            this.txtCedula.TabIndex = 27;
+            // 
+            // lblCedula
+            // 
+            this.lblCedula.AutoSize = true;
+            this.lblCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.ForeColor = System.Drawing.Color.White;
+            this.lblCedula.Location = new System.Drawing.Point(184, 81);
+            this.lblCedula.Name = "lblCedula";
+            this.lblCedula.Size = new System.Drawing.Size(76, 23);
+            this.lblCedula.TabIndex = 26;
+            this.lblCedula.Text = "Cedula:";
+            // 
+            // btnCalificacion
+            // 
+            this.btnCalificacion.Location = new System.Drawing.Point(333, 467);
+            this.btnCalificacion.Name = "btnCalificacion";
+            this.btnCalificacion.Size = new System.Drawing.Size(165, 37);
+            this.btnCalificacion.TabIndex = 20;
+            this.btnCalificacion.Text = "Enviar Calificacion";
+            this.btnCalificacion.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(333, 369);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 45);
+            this.numericUpDown2.TabIndex = 19;
+            // 
+            // lblEspecialista
+            // 
+            this.lblEspecialista.AutoSize = true;
+            this.lblEspecialista.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialista.ForeColor = System.Drawing.Color.White;
+            this.lblEspecialista.Location = new System.Drawing.Point(132, 376);
+            this.lblEspecialista.Name = "lblEspecialista";
+            this.lblEspecialista.Size = new System.Drawing.Size(193, 38);
+            this.lblEspecialista.TabIndex = 18;
+            this.lblEspecialista.Text = "Especialista:";
+            // 
+            // lblCita
+            // 
+            this.lblCita.AutoSize = true;
+            this.lblCita.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCita.ForeColor = System.Drawing.Color.White;
+            this.lblCita.Location = new System.Drawing.Point(132, 312);
+            this.lblCita.Name = "lblCita";
+            this.lblCita.Size = new System.Drawing.Size(195, 38);
+            this.lblCita.TabIndex = 17;
+            this.lblCita.Text = "Cita Medica:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(333, 305);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 45);
+            this.numericUpDown1.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1154, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblInfoPasiente
             // 
@@ -153,57 +232,15 @@
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.serviciosToolStripMenuItem.Text = "&Servicios";
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1154, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(353, 196);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 45);
-            this.numericUpDown1.TabIndex = 16;
-            // 
-            // lblCita
-            // 
-            this.lblCita.AutoSize = true;
-            this.lblCita.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCita.ForeColor = System.Drawing.Color.White;
-            this.lblCita.Location = new System.Drawing.Point(152, 203);
-            this.lblCita.Name = "lblCita";
-            this.lblCita.Size = new System.Drawing.Size(195, 38);
-            this.lblCita.TabIndex = 17;
-            this.lblCita.Text = "Cita Medica:";
-            // 
-            // lblEspecialista
-            // 
-            this.lblEspecialista.AutoSize = true;
-            this.lblEspecialista.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialista.ForeColor = System.Drawing.Color.White;
-            this.lblEspecialista.Location = new System.Drawing.Point(152, 267);
-            this.lblEspecialista.Name = "lblEspecialista";
-            this.lblEspecialista.Size = new System.Drawing.Size(193, 38);
-            this.lblEspecialista.TabIndex = 18;
-            this.lblEspecialista.Text = "Especialista:";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(353, 260);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 45);
-            this.numericUpDown2.TabIndex = 19;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(188, 131);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(693, 150);
+            this.dataGridView1.TabIndex = 28;
             // 
             // frmEvaluacion
             // 
@@ -215,11 +252,12 @@
             this.Text = "frmEvaluacion";
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,12 +272,15 @@
         private System.Windows.Forms.ToolStripMenuItem reservarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblInfoPasiente;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label lblEspecialista;
         private System.Windows.Forms.Label lblCita;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnCalificacion;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label lblCedula;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
