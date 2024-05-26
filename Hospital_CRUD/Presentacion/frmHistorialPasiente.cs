@@ -19,6 +19,7 @@ namespace Hospital_CRUD
         public frmHistorialPasiente()
         {
             InitializeComponent();
+            Historial();
         }
 
         private void ModificarHistorial(int idHistorial, int idCedula, string descripcion)
@@ -85,17 +86,50 @@ namespace Hospital_CRUD
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int idCedula = Convert.ToInt32(txtCedula.Text);
-            string descripcion = txtDescripcion.Text;
-
-            if (ExisteCedula(idCedula))
+            // Verifica si el campo txtCedula está vacío
+            if (string.IsNullOrWhiteSpace(txtCedula.Text))
             {
-                AgregarHistorial(idCedula, descripcion);
+                // Si está vacío, carga todos los registros
                 Historial();
             }
             else
             {
-                MessageBox.Show("La cédula ingresada no está registrada en la base de datos.");
+                // Si no está vacío, busca por cédula y actualiza el DataGridView
+                int idCedula;
+                if (int.TryParse(txtCedula.Text, out idCedula))
+                {
+                    BuscarYMostrarHistorial(idCedula);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un número de cédula válido.");
+                }
+            }
+        }
+
+        private void BuscarYMostrarHistorial(int idCedula)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                string query = "SP_ObtenerHistorialClinicoPorCedula";
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Id_Cedula", idCedula);
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                // Si se encontraron registros, muestra solo esos
+                if (dt.Rows.Count > 0)
+                {
+                    dgvHistorial.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el historial clínico para la cédula proporcionada.");
+                    dgvHistorial.DataSource = null; 
+                }
             }
         }
         private bool ExisteCedula(int idCedula)
