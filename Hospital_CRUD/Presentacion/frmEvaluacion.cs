@@ -37,15 +37,17 @@ namespace Hospital_CRUD
                     using (SqlConnection connection = new SqlConnection(cadenaConexion))
                     {
                         string query = @"
-                    SELECT 
+                        SELECT 
+                        C.Id_Cita,
+                        D.Id_Doctor,
                         C.Fecha, 
                         C.Hora, 
                         D.Nombre + ' ' + D.Apellido AS 'Especialista', 
                         D.Especialidad
-                    FROM CITA C
-                    INNER JOIN CONSULTORIO CO ON C.Id_Consultorio = CO.Id_Consultorio
-                    INNER JOIN DOCTOR D ON CO.Id_Consultorio = D.Id_Consultorio
-                    WHERE C.Id_Cedula = @Cedula";
+                        FROM CITA C
+                        INNER JOIN CONSULTORIO CO ON C.Id_Consultorio = CO.Id_Consultorio
+                        INNER JOIN DOCTOR D ON CO.Id_Consultorio = D.Id_Consultorio
+                        WHERE C.Id_Cedula = @Cedula";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
