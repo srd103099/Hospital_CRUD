@@ -149,5 +149,11 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
                 txtCorreo.Clear();
             }
         }
+
+        private void frmCRUDPasiente_Load(object sender, EventArgs e)
+        {
+            dgvPacientes.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            dgvPacientes.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+        }
     }
 }
