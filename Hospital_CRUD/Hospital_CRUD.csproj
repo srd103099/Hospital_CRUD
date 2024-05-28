@@ -92,16 +92,16 @@
     <Compile Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.Designer.cs">
       <DependentUpon>frmDoctorInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmEvaluacion.cs">
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmEvaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmEvaluacion.Designer.cs">
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmEvaluacion.Designer.cs">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmHistorialPasiente.cs">
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmHistorialPasiente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmHistorialPasiente.Designer.cs">
+    <Compile Include="Presentacion\Ya revisado sin CRUD\frmHistorialPasiente.Designer.cs">
       <DependentUpon>frmHistorialPasiente.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ya Echo\frmInfoPasientes.cs">
@@ -160,10 +160,10 @@
     <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmDoctorInicio.resx">
       <DependentUpon>frmDoctorInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmEvaluacion.resx">
+    <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmEvaluacion.resx">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmHistorialPasiente.resx">
+    <EmbeddedResource Include="Presentacion\Ya revisado sin CRUD\frmHistorialPasiente.resx">
       <DependentUpon>frmHistorialPasiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ya Echo\frmInfoPasientes.resx">
