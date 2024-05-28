@@ -171,9 +171,9 @@
             this.lblHistorial.ForeColor = System.Drawing.Color.White;
             this.lblHistorial.Location = new System.Drawing.Point(530, 18);
             this.lblHistorial.Name = "lblHistorial";
-            this.lblHistorial.Size = new System.Drawing.Size(369, 38);
+            this.lblHistorial.Size = new System.Drawing.Size(371, 38);
             this.lblHistorial.TabIndex = 19;
-            this.lblHistorial.Text = "Buscar Historial Pasiente";
+            this.lblHistorial.Text = "Buscar Historial Paciente";
             // 
             // pictureBox2
             // 
@@ -230,7 +230,7 @@
             this.citaMedicaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(158, 653);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -255,7 +255,7 @@
             this.citaMedicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.citaMedicaToolStripMenuItem.Name = "citaMedicaToolStripMenuItem";
             this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
-            this.citaMedicaToolStripMenuItem.Text = "&Pasiente";
+            this.citaMedicaToolStripMenuItem.Text = "&Paciente";
             this.citaMedicaToolStripMenuItem.Click += new System.EventHandler(this.citaMedicaToolStripMenuItem_Click);
             // 
             // frmHistorialPasiente

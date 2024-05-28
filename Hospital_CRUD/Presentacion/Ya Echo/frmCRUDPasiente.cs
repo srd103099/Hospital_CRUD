@@ -162,5 +162,10 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
             this.Hide();
             frmDoctorInicio.Show();
         }
+
+        private void lblInfoPasiente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

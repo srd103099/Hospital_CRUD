@@ -33,11 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -101,6 +101,14 @@
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
+            // cerrarToolStripMenuItem
+            // 
+            this.cerrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.cerrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.cerrarToolStripMenuItem.Text = "&Cerrar";
+            // 
             // iniciarSesionToolStripMenuItem
             // 
             this.iniciarSesionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -127,7 +135,7 @@
             this.pasienteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pasienteToolStripMenuItem.Name = "pasienteToolStripMenuItem";
             this.pasienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.pasienteToolStripMenuItem.Text = "&Pasiente";
+            this.pasienteToolStripMenuItem.Text = "&Paciente";
             this.pasienteToolStripMenuItem.Click += new System.EventHandler(this.pasienteToolStripMenuItem_Click);
             // 
             // registrarseToolStripMenuItem
@@ -137,14 +145,6 @@
             this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.registrarseToolStripMenuItem.Text = "&Registrarse";
             this.registrarseToolStripMenuItem.Click += new System.EventHandler(this.registrarseToolStripMenuItem_Click);
-            // 
-            // cerrarToolStripMenuItem
-            // 
-            this.cerrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cerrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.cerrarToolStripMenuItem.Text = "&Cerrar";
             // 
             // Form1
             // 

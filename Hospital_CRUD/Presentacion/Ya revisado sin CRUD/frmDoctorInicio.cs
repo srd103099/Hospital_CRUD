@@ -26,12 +26,7 @@ namespace Hospital_CRUD
 
         }
 
-        private void citaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /*frmCitaMedica CitaMedica = new frmCitaMedica();
-            this.Hide();
-            CitaMedica.Show();*/
-        }
+        
 
         private void pasienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,5 +34,7 @@ namespace Hospital_CRUD
             this.Hide();
             pasiente.Show();
         }
+
+    
     }
 }

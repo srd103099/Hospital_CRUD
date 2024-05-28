@@ -84,9 +84,9 @@
             this.lblInfo.ForeColor = System.Drawing.Color.White;
             this.lblInfo.Location = new System.Drawing.Point(577, 79);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(228, 38);
+            this.lblInfo.Size = new System.Drawing.Size(224, 38);
             this.lblInfo.TabIndex = 7;
-            this.lblInfo.Text = "LogIn Paciente";
+            this.lblInfo.Text = "Login Paciente";
             // 
             // pictureBox1
             // 
@@ -166,7 +166,7 @@
             this.registrarseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(104, 653);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -174,14 +174,14 @@
             // 
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // registrarseToolStripMenuItem
             // 
             this.registrarseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.registrarseToolStripMenuItem.Name = "registrarseToolStripMenuItem";
-            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.registrarseToolStripMenuItem.Text = "&Registrarse";
             this.registrarseToolStripMenuItem.Click += new System.EventHandler(this.registrarseToolStripMenuItem_Click);
             // 

@@ -79,9 +79,9 @@ namespace Hospital_CRUD
 
         private void evaluacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEvaluacion frmEvaluacion = new frmEvaluacion();
+            /*frmEvaluacion frmEvaluacion = new frmEvaluacion();
             this.Hide();
-            frmEvaluacion.Show();
+            frmEvaluacion.Show();*/
         }
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
