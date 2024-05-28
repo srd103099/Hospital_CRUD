@@ -81,6 +81,11 @@ namespace Hospital_CRUD
             this.Hide();
             inicioSesionPasiente.Show();
         }
+
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

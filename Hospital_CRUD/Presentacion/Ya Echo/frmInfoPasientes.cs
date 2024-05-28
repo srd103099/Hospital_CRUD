@@ -38,16 +38,18 @@ namespace Hospital_CRUD
                     comando.Parameters.AddWithValue("Apellido", txtApellido.Text);
                     comando.Parameters.AddWithValue("Telefono", txtTelefono.Text);
                     comando.Parameters.AddWithValue("Correo", txtCorreo.Text);
-                    SqlDataReader lector = comando.ExecuteReader();
+                    //SqlDataReader lector = comando.ExecuteReader();
+                    int filasAfectadas = comando.ExecuteNonQuery();
 
-                    if (lector.Read())
+
+                    if (filasAfectadas > 0)
                     {
                         MessageBox.Show("Te haz registrado tu informacion con exito.");
                         conexion.Close();
 
                         frmPasienteInicio PasienteInicio = new frmPasienteInicio();
                         this.Hide();
-                        PasienteInicio.Show(); ;
+                        PasienteInicio.Show(); 
                     }
                     /*else
                     {
@@ -84,7 +86,7 @@ namespace Hospital_CRUD
                 catch (Exception) /* <------------ (MALO) */
                 {
 
-                    //throw;
+                    throw;
                 }
             }
         }

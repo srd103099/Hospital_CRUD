@@ -76,5 +76,33 @@ namespace Hospital_CRUD
                 }
             }
         }
+
+        private void evaluacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEvaluacion frmEvaluacion = new frmEvaluacion();
+            this.Hide();
+            frmEvaluacion.Show();
+        }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmServicios frmServicios = new frmServicios();
+            this.Hide();
+            frmServicios.Show();
+        }
+
+        private void reservarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReserva frmReserva = new frmReserva();
+            this.Hide();
+            frmReserva.Show();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPasienteInicio frmPasienteInicio = new frmPasienteInicio();
+            this.Hide();
+            frmPasienteInicio.Show();
+        }
     }
 }

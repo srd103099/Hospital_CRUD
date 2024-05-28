@@ -286,7 +286,7 @@
             this.iniciarSesionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(112, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -294,15 +294,16 @@
             // 
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // iniciarSesionToolStripMenuItem
             // 
             this.iniciarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
-            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
-            this.iniciarSesionToolStripMenuItem.Text = "&IniciarSesion";
+            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.iniciarSesionToolStripMenuItem.Text = "&Inicio";
+            this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
             // frmCRUDPasiente
             // 

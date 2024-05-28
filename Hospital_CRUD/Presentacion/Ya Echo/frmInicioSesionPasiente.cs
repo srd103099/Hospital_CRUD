@@ -42,7 +42,11 @@ namespace Hospital_CRUD
 
                         frmPasienteInicio PasienteInicio = new frmPasienteInicio();
                         this.Hide();
-                        PasienteInicio.Show(); 
+                        PasienteInicio.Show();
+
+                        /*frmInfoPasientes InfoPasientes = new frmInfoPasientes();
+                        this.Hide();
+                        InfoPasientes.Show();*/
                     }
                     else
                     {
@@ -75,6 +79,13 @@ namespace Hospital_CRUD
             Form1 form = new Form1();
             this.Hide();
             form.Show();
+        }
+
+        private void registrarseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarse frmRegistrarse = new frmRegistrarse();
+            this.Hide();
+            frmRegistrarse.Show();
         }
     }
 }

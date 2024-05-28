@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -62,6 +62,20 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1149, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 36);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblInfo
             // 
@@ -152,7 +166,7 @@
             this.registrarseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(102, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,29 +174,16 @@
             // 
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // registrarseToolStripMenuItem
             // 
             this.registrarseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.registrarseToolStripMenuItem.Name = "registrarseToolStripMenuItem";
-            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.registrarseToolStripMenuItem.Text = "&Registrarse";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1149, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.registrarseToolStripMenuItem.Click += new System.EventHandler(this.registrarseToolStripMenuItem_Click);
             // 
             // frmInicioSesionPasiente
             // 

@@ -31,6 +31,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
@@ -99,6 +99,18 @@
             this.txtDescripcion.Size = new System.Drawing.Size(268, 198);
             this.txtDescripcion.TabIndex = 31;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(450, 251);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Descripcion:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnEliminar
             // 
@@ -218,7 +230,7 @@
             this.citaMedicaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(104, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -227,34 +239,24 @@
             this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.inicioToolStripMenuItem.Text = "&Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // citaMedicaToolStripMenuItem
             // 
             this.citaMedicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.citaMedicaToolStripMenuItem.Name = "citaMedicaToolStripMenuItem";
-            this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
-            this.citaMedicaToolStripMenuItem.Text = "&CitaMedica";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(450, 251);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Descripcion:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.citaMedicaToolStripMenuItem.Text = "&Pasiente";
+            this.citaMedicaToolStripMenuItem.Click += new System.EventHandler(this.citaMedicaToolStripMenuItem_Click);
             // 
             // frmHistorialPasiente
             // 

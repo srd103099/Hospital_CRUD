@@ -186,6 +186,7 @@
             this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
             this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.iniciarSesionToolStripMenuItem.Text = "&IniciarSesion";
+            this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
             // pasienteToolStripMenuItem
             // 

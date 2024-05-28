@@ -337,7 +337,7 @@
             this.evaluacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(100, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -346,36 +346,40 @@
             this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.inicioToolStripMenuItem.Text = "&Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // buscarCitaToolStripMenuItem
             // 
             this.buscarCitaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.buscarCitaToolStripMenuItem.Name = "buscarCitaToolStripMenuItem";
-            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.buscarCitaToolStripMenuItem.Text = "&BuscarCita";
+            this.buscarCitaToolStripMenuItem.Click += new System.EventHandler(this.buscarCitaToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.serviciosToolStripMenuItem.Text = "&Servicios";
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // evaluacionToolStripMenuItem
             // 
             this.evaluacionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.evaluacionToolStripMenuItem.Name = "evaluacionToolStripMenuItem";
-            this.evaluacionToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.evaluacionToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.evaluacionToolStripMenuItem.Text = "&Evaluacion";
+            this.evaluacionToolStripMenuItem.Click += new System.EventHandler(this.evaluacionToolStripMenuItem_Click);
             // 
             // frmReserva
             // 

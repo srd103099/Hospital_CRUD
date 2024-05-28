@@ -1,4 +1,5 @@
 ﻿using Hospital_CRUD.Entidad;
+using Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -252,6 +253,20 @@ namespace Hospital_CRUD
         private void lblCedula_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void citaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCRUDPasiente frmCRUDPasiente = new frmCRUDPasiente();
+            this.Hide();
+            frmCRUDPasiente.Show();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoctorInicio frmDoctorInicio = new frmDoctorInicio();
+            this.Hide();
+            frmDoctorInicio.Show();
         }
     }
 }

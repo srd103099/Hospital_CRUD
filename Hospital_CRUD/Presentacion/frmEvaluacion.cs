@@ -130,5 +130,33 @@ namespace Hospital_CRUD
 
             GuardarEvaluacion(idDoctor, idCita, calificacionProfesional, calificacionServicio);
         }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmServicios frmServicios = new frmServicios();
+            this.Hide();
+            frmServicios.Show();
+        }
+
+        private void buscarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCita frmBuscarCita = new frmBuscarCita();
+            this.Hide();
+            frmBuscarCita.Show();
+        }
+
+        private void reservarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReserva frmReserva = new frmReserva();
+            this.Hide();
+            frmReserva.Show();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPasienteInicio frmPasienteInicio = new frmPasienteInicio();
+            this.Hide();
+            frmPasienteInicio.Show();
+        }
     }
 }

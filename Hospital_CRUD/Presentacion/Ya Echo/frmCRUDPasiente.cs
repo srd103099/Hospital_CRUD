@@ -155,5 +155,12 @@ namespace Hospital_CRUD.Presentacion.Ya_revisado_sin_CRUD
             dgvPacientes.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             dgvPacientes.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
         }
+
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoctorInicio frmDoctorInicio = new frmDoctorInicio();
+            this.Hide();
+            frmDoctorInicio.Show();
+        }
     }
 }

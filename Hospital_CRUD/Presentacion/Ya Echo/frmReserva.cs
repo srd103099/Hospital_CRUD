@@ -199,8 +199,34 @@ namespace Hospital_CRUD
             this.Hide();
             inicioSesionPasiente.Show();
         }
-        
 
+        private void evaluacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEvaluacion evaluacion = new frmEvaluacion();
+            this.Hide();
+            evaluacion.Show();
+        }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmServicios servicios = new frmServicios();
+            this.Hide();
+            servicios.Show();
+        }
+
+        private void buscarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCita buscarCita = new frmBuscarCita();
+            this.Hide();
+            buscarCita.Show();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPasienteInicio frmPasienteInicio = new frmPasienteInicio();
+            this.Hide();
+            frmPasienteInicio.Show();
+        }
     }
     
 }

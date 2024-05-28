@@ -32,6 +32,7 @@
             this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.lblCedula = new System.Windows.Forms.Label();
+            this.btnBuscarCita = new System.Windows.Forms.Button();
             this.btnCalificacion = new System.Windows.Forms.Button();
             this.nudEspecialista = new System.Windows.Forms.NumericUpDown();
             this.lblEspecialista = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.reservarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnBuscarCita = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEspecialista)).BeginInit();
@@ -73,20 +73,18 @@
             this.panelContenedor.Controls.Add(this.menuStrip1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1442, 816);
+            this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 7;
             // 
             // dgvCitas
             // 
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Location = new System.Drawing.Point(212, 164);
-            this.dgvCitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCitas.Location = new System.Drawing.Point(188, 131);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.RowHeadersWidth = 51;
             this.dgvCitas.RowTemplate.Height = 24;
-            this.dgvCitas.Size = new System.Drawing.Size(780, 188);
+            this.dgvCitas.Size = new System.Drawing.Size(693, 150);
             this.dgvCitas.TabIndex = 28;
             // 
             // txtCedula
@@ -95,10 +93,9 @@
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.ForeColor = System.Drawing.Color.White;
-            this.txtCedula.Location = new System.Drawing.Point(306, 101);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCedula.Location = new System.Drawing.Point(272, 81);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(233, 28);
+            this.txtCedula.Size = new System.Drawing.Size(207, 23);
             this.txtCedula.TabIndex = 27;
             // 
             // lblCedula
@@ -106,18 +103,27 @@
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.White;
-            this.lblCedula.Location = new System.Drawing.Point(207, 101);
+            this.lblCedula.Location = new System.Drawing.Point(184, 81);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(93, 26);
+            this.lblCedula.Size = new System.Drawing.Size(76, 23);
             this.lblCedula.TabIndex = 26;
             this.lblCedula.Text = "Cedula:";
             // 
+            // btnBuscarCita
+            // 
+            this.btnBuscarCita.Location = new System.Drawing.Point(532, 74);
+            this.btnBuscarCita.Name = "btnBuscarCita";
+            this.btnBuscarCita.Size = new System.Drawing.Size(165, 37);
+            this.btnBuscarCita.TabIndex = 20;
+            this.btnBuscarCita.Text = "Enviar Calificacion";
+            this.btnBuscarCita.UseVisualStyleBackColor = true;
+            this.btnBuscarCita.Click += new System.EventHandler(this.btnBuscarCita_Click);
+            // 
             // btnCalificacion
             // 
-            this.btnCalificacion.Location = new System.Drawing.Point(375, 584);
-            this.btnCalificacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCalificacion.Location = new System.Drawing.Point(333, 467);
             this.btnCalificacion.Name = "btnCalificacion";
-            this.btnCalificacion.Size = new System.Drawing.Size(186, 46);
+            this.btnCalificacion.Size = new System.Drawing.Size(165, 37);
             this.btnCalificacion.TabIndex = 20;
             this.btnCalificacion.Text = "Enviar Calificacion";
             this.btnCalificacion.UseVisualStyleBackColor = true;
@@ -126,10 +132,9 @@
             // nudEspecialista
             // 
             this.nudEspecialista.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudEspecialista.Location = new System.Drawing.Point(386, 463);
-            this.nudEspecialista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudEspecialista.Location = new System.Drawing.Point(343, 370);
             this.nudEspecialista.Name = "nudEspecialista";
-            this.nudEspecialista.Size = new System.Drawing.Size(135, 53);
+            this.nudEspecialista.Size = new System.Drawing.Size(120, 45);
             this.nudEspecialista.TabIndex = 19;
             // 
             // lblEspecialista
@@ -137,9 +142,9 @@
             this.lblEspecialista.AutoSize = true;
             this.lblEspecialista.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialista.ForeColor = System.Drawing.Color.White;
-            this.lblEspecialista.Location = new System.Drawing.Point(148, 470);
+            this.lblEspecialista.Location = new System.Drawing.Point(132, 376);
             this.lblEspecialista.Name = "lblEspecialista";
-            this.lblEspecialista.Size = new System.Drawing.Size(232, 46);
+            this.lblEspecialista.Size = new System.Drawing.Size(193, 38);
             this.lblEspecialista.TabIndex = 18;
             this.lblEspecialista.Text = "Especialista:";
             // 
@@ -148,19 +153,18 @@
             this.lblCita.AutoSize = true;
             this.lblCita.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCita.ForeColor = System.Drawing.Color.White;
-            this.lblCita.Location = new System.Drawing.Point(148, 390);
+            this.lblCita.Location = new System.Drawing.Point(132, 312);
             this.lblCita.Name = "lblCita";
-            this.lblCita.Size = new System.Drawing.Size(235, 46);
+            this.lblCita.Size = new System.Drawing.Size(195, 38);
             this.lblCita.TabIndex = 17;
             this.lblCita.Text = "Cita Medica:";
             // 
             // nudCita
             // 
             this.nudCita.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCita.Location = new System.Drawing.Point(389, 383);
-            this.nudCita.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudCita.Location = new System.Drawing.Point(346, 306);
             this.nudCita.Name = "nudCita";
-            this.nudCita.Size = new System.Drawing.Size(135, 53);
+            this.nudCita.Size = new System.Drawing.Size(120, 45);
             this.nudCita.TabIndex = 16;
             // 
             // button1
@@ -169,10 +173,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1298, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(1154, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 45);
+            this.button1.Size = new System.Drawing.Size(104, 36);
             this.button1.TabIndex = 9;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -183,19 +186,18 @@
             this.lblInfoPasiente.AutoSize = true;
             this.lblInfoPasiente.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoPasiente.ForeColor = System.Drawing.Color.White;
-            this.lblInfoPasiente.Location = new System.Drawing.Point(440, 30);
+            this.lblInfoPasiente.Location = new System.Drawing.Point(391, 24);
             this.lblInfoPasiente.Name = "lblInfoPasiente";
-            this.lblInfoPasiente.Size = new System.Drawing.Size(658, 46);
+            this.lblInfoPasiente.Size = new System.Drawing.Size(545, 38);
             this.lblInfoPasiente.TabIndex = 14;
             this.lblInfoPasiente.Text = "Evaluacion Cita Medica y Especialista";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 765);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 612);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(126, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(112, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -204,7 +206,6 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
@@ -214,8 +215,8 @@
             this.serviciosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(131, 816);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -224,55 +225,47 @@
             this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.inicioToolStripMenuItem.Text = "&Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // reservarCitaToolStripMenuItem
             // 
             this.reservarCitaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reservarCitaToolStripMenuItem.Name = "reservarCitaToolStripMenuItem";
-            this.reservarCitaToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.reservarCitaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.reservarCitaToolStripMenuItem.Text = "&ReservarCita";
+            this.reservarCitaToolStripMenuItem.Click += new System.EventHandler(this.reservarCitaToolStripMenuItem_Click);
             // 
             // buscarCitaToolStripMenuItem
             // 
             this.buscarCitaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.buscarCitaToolStripMenuItem.Name = "buscarCitaToolStripMenuItem";
-            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.buscarCitaToolStripMenuItem.Text = "&BuscarCita";
+            this.buscarCitaToolStripMenuItem.Click += new System.EventHandler(this.buscarCitaToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.serviciosToolStripMenuItem.Text = "&Servicios";
-            // 
-            // btnBuscarCita
-            // 
-            this.btnBuscarCita.Location = new System.Drawing.Point(599, 93);
-            this.btnBuscarCita.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBuscarCita.Name = "btnBuscarCita";
-            this.btnBuscarCita.Size = new System.Drawing.Size(186, 46);
-            this.btnBuscarCita.TabIndex = 20;
-            this.btnBuscarCita.Text = "Enviar Calificacion";
-            this.btnBuscarCita.UseVisualStyleBackColor = true;
-            this.btnBuscarCita.Click += new System.EventHandler(this.btnBuscarCita_Click);
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // frmEvaluacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1442, 816);
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.panelContenedor);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEvaluacion";
             this.Text = "frmEvaluacion";
             this.panelContenedor.ResumeLayout(false);

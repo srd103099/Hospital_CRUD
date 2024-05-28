@@ -44,7 +44,6 @@
             this.lblCedula = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -223,11 +222,10 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.iniciarSesionToolStripMenuItem});
+            this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(114, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(79, 653);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -235,15 +233,8 @@
             // 
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
-            // 
-            // iniciarSesionToolStripMenuItem
-            // 
-            this.iniciarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
-            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
-            this.iniciarSesionToolStripMenuItem.Text = "&IniciarSesion";
             // 
             // frmInfoPasientes
             // 
@@ -280,6 +271,5 @@
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iniciarSesionToolStripMenuItem;
     }
 }

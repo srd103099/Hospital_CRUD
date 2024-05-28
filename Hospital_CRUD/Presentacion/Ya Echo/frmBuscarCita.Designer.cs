@@ -61,9 +61,8 @@
             this.panelContenedor.Controls.Add(this.menuStrip1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1442, 816);
+            this.panelContenedor.Size = new System.Drawing.Size(1282, 653);
             this.panelContenedor.TabIndex = 7;
             // 
             // button1
@@ -72,10 +71,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1312, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(1166, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 45);
+            this.button1.Size = new System.Drawing.Size(104, 36);
             this.button1.TabIndex = 9;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -86,19 +84,18 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(702, 11);
+            this.lblBuscar.Location = new System.Drawing.Point(624, 9);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(218, 46);
+            this.lblBuscar.Size = new System.Drawing.Size(180, 38);
             this.lblBuscar.TabIndex = 19;
             this.lblBuscar.Text = "Buscar Cita";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 772);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 618);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(111, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -108,10 +105,9 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(736, 465);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(654, 372);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(119, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(106, 34);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -123,10 +119,9 @@
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.ForeColor = System.Drawing.Color.White;
-            this.txtCedula.Location = new System.Drawing.Point(710, 396);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCedula.Location = new System.Drawing.Point(631, 317);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(233, 28);
+            this.txtCedula.Size = new System.Drawing.Size(207, 23);
             this.txtCedula.TabIndex = 16;
             // 
             // lblCedula
@@ -134,28 +129,26 @@
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.White;
-            this.lblCedula.Location = new System.Drawing.Point(611, 396);
+            this.lblCedula.Location = new System.Drawing.Point(543, 317);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(93, 26);
+            this.lblCedula.Size = new System.Drawing.Size(76, 23);
             this.lblCedula.TabIndex = 15;
             this.lblCedula.Text = "Cedula:";
             // 
             // dgvCitas
             // 
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Location = new System.Drawing.Point(153, 92);
-            this.dgvCitas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCitas.Location = new System.Drawing.Point(136, 74);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.RowHeadersWidth = 51;
             this.dgvCitas.RowTemplate.Height = 24;
-            this.dgvCitas.Size = new System.Drawing.Size(1259, 272);
+            this.dgvCitas.Size = new System.Drawing.Size(1119, 218);
             this.dgvCitas.TabIndex = 3;
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
@@ -165,8 +158,8 @@
             this.evaluacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(131, 816);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,44 +168,47 @@
             this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.archivoToolStripMenuItem.Text = "&Archivo";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.inicioToolStripMenuItem.Text = "&Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // reservarCitaToolStripMenuItem
             // 
             this.reservarCitaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reservarCitaToolStripMenuItem.Name = "reservarCitaToolStripMenuItem";
-            this.reservarCitaToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.reservarCitaToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.reservarCitaToolStripMenuItem.Text = "&ReservarCita";
+            this.reservarCitaToolStripMenuItem.Click += new System.EventHandler(this.reservarCitaToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.serviciosToolStripMenuItem.Text = "&Servicios";
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // evaluacionToolStripMenuItem
             // 
             this.evaluacionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.evaluacionToolStripMenuItem.Name = "evaluacionToolStripMenuItem";
-            this.evaluacionToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.evaluacionToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.evaluacionToolStripMenuItem.Text = "&Evaluacion";
+            this.evaluacionToolStripMenuItem.Click += new System.EventHandler(this.evaluacionToolStripMenuItem_Click);
             // 
             // frmBuscarCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1442, 816);
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.panelContenedor);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBuscarCita";
             this.Text = "frmBuscarCita";
             this.panelContenedor.ResumeLayout(false);
